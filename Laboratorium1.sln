@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laboratorium 2", "Laborator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laboratorium5", "Laboratorium5\Laboratorium5.csproj", "{3DE2ADE6-3340-412A-BDF7-6E75F9AF918E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorium6", "Laboratorium6\Laboratorium6.csproj", "{35DC38D9-4F5A-44DD-B302-561452F34731}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laboratorium6", "Laboratorium6\Laboratorium6.csproj", "{35DC38D9-4F5A-44DD-B302-561452F34731}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "interfaces", "interfaces", "{16419416-C4FE-4B44-A9CB-24B387384863}"
+	ProjectSection(SolutionItems) = preProject
+		IBaseRepository.cs = IBaseRepository.cs
+		IBookRepository.cs = IBookRepository.cs
+		ICreationTime.cs = ICreationTime.cs
+		IEntity.cs = IEntity.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
