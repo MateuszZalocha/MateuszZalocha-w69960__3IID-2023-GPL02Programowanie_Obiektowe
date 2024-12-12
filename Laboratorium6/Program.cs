@@ -1,10 +1,40 @@
-﻿using interfaces;
+﻿
+using System;
 
-namespace Lab2.Lab6
+using System.Collections.Generic;
+using System.Linq;
+
+public class PersonRepository : IPersonRepository
 {
-    public class Book : IEntity<long>, ICreationTime
+    private List<Person> persons;
+
+    public PersonRepository()
     {
-        public long Id { get; set; }
-        public DateTime CreationTime { get; set; }
+        persons = new List<Person>();
+    }
+
+    public List<Person> GetAllPersons()
+    {
+        return persons;
+    }
+
+    public Person GetPersonByName(string name)
+    {
+        return persons.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+    }
+
+    public List<Book> GetBooksBorrowedByPerson(Person person)
+    {
+        return person.BorrowedBooks;
+    }
+
+    public void AddBookToPersonBorrowedBooks(Person person, Book book)
+    {
+        person.BorrowBook(book);
+    }
+
+    public void AddPerson(Person person)
+    {
+        persons.Add(person);
     }
 }

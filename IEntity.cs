@@ -1,4 +1,4 @@
-﻿namespace Lab2.Interfaces
+﻿namespace interfaces
 {
     public interface IEntity<T>
     {
